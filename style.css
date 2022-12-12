@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "DS-DIGI";
+    src: url(./fonts/DS-DIGI.TTF) format("truetype");
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.calculator {
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    padding: 32px;
+    border-radius: 5px;
+    row-gap: 5px;
+}
+#prev {
+    height: 32px;
+}
+#display,
+#prev {
+    text-align: right;
+    font-family: "DS-DIGI";
+    font-size: 1.3rem;
+    padding: 5px;
+}
+#operand {
+    text-align: right;
+    padding: 0 5px;
+    font-weight: bold;
+    height: 16px;
+}
+#display {
+    font-weight: bold;
+    font-size: 32px;
+    height: 32px;
+}
+#keys {
+    width: 280px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+button {
+    font-size: 1.3rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4), 3px 3px 4px rgba(0, 0, 0, 0.1);
+}
+button:active {
+    box-shadow: none;
+    background-color: gray;
+}
+
+#equals {
+    grid-column: 4/5;
+    grid-row: 4 / 6;
+    background-color: #03c03c;
+}
+
+#equals:hover {
+    background-color: #00ff40;
+}
+#equals:active {
+    background-color: #03c03c;
+}
